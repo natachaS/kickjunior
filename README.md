@@ -1,5 +1,5 @@
 # kickjunior [![Build Status](https://travis-ci.org/natachaS/kickjunior.svg?branch=master)](https://travis-ci.org/natachaS/kickjunior)
-A REPL version of Kickstarter built with the latest version of Node.js v5.4.1 (works with stable versions of Node v0.12 or newer).
+A command line version of Kickstarter built with the latest version of Node.js v5.4.1 (works with stable versions of Node v0.12 or newer).
 The application was built following specified requirements and is using an in-memory data store.
 
 
@@ -49,4 +49,4 @@ I also built a map of card hashes to username to optimize the search of differen
     '49834938498394839483984938493493': 'tywin'
   };
 ```
-Future iterations : Add a database, use callbacks to differentiate between an error and an actual result and represent both in different colors for example.
+Future iterations: Add a database, use callbacks to differentiate between an error and an actual result and represent both in different colors for example.

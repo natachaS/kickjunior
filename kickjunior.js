@@ -1,14 +1,15 @@
 var readline = require('readline');
-var parser = require('./lib/commands/parser');
+var evaluate = require('./lib/commands/evaluate');
 var data = require('./lib/data/data');
 var rl = readline.createInterface(process.stdin, process.stdout);
 
-rl.setPrompt('KickJunior> ');
 data.init();
+
+rl.setPrompt('KickJunior> ');
 rl.prompt();
 
 rl.on('line', function (line) {
-  var result = parser(line);
+  var result = evaluate(line);
   console.log(result, '\n');
   rl.prompt();
 }).on('close', function () {

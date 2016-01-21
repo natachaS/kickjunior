@@ -1,4 +1,4 @@
-var parse = require('../lib/commands/parser');
+var parse = require('../lib/commands/evaluate');
 var errors = require('../lib/common/errors');
 var data = require('../lib/data/data');
 var expect = require('chai').expect;
