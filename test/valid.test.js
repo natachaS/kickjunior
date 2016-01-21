@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var vl = require('../lib/common/valid');
+var vl = require('../lib/common/validate');
 
 describe('The validation and formatting module', function () {
   describe('Validating the credit card number', function () {
@@ -50,18 +50,6 @@ describe('The validation and formatting module', function () {
 
     it('should check for letters', function () {
       expect(vl.validate_amount('123go')).to.be.false;
-    });
-  });
-
-  describe('Formatting a number', function () {
-
-    it('should exist and be a function', function () {
-      expect(vl.format_number).to.exist;
-      expect(vl.format_number).to.be.a('function');
-    });
-
-    it('should be a language sensitive representation of a number', function () {
-      expect(vl.format_number('100000')).to.eql('100,000');
     });
   });
 });
