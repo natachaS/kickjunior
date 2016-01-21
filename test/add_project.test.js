@@ -14,7 +14,7 @@ describe('Adding a project', function () {
     expect(add_project).to.be.a('function');
   });
 
-  
+
   it('should not allow project names that are too short or too long', function () {
     var project_name_short = 'foo';
     var project_name_long = 'pneumonoultramicroscopicsilicovolcanoconiosi';
@@ -44,7 +44,7 @@ describe('Adding a project', function () {
   it('adds a project to our in-memory data store', function () {
     var project_name = 'Potato_salad';
     var target_amount = '100000000';
-    var expected_result = {target_amount: '100,000,000', backers: [] };
+    var expected_result = {target_amount: '100000000', backers: [] };
     add_project(project_name, target_amount);
 
     expect(data.get_project('Potato_salad')).to.eql(expected_result);
