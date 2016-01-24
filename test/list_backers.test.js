@@ -6,12 +6,12 @@ var list_backers = require('../lib/commands/list_backers');
 describe('Listing all the backers for a specific project', function () {
   before(function () {
       var project_name = 'WebComics';
-      var target_amount = '200';
+      var target_amount = 200;
       var backer_name_one = 'Natacha';
       var backer_name_two = 'Rebecca';
       var credit_card_one = '3337396323439158';
       var credit_card_two = '5120027532760961';
-      var backing_amount = '50';
+      var backing_amount = 50;
       data.init();
       data.add_project(project_name, target_amount);
       data.add_pledge(backer_name_one, project_name, credit_card_one, backing_amount);
@@ -39,16 +39,14 @@ describe('Listing all the backers for a specific project', function () {
   });
 
   it('saves a backer object our project data store', function () {
-      expect(data.get_project('WebComics').backers.length).to.eql(2);
+      expect(data.get_project('WebComics').pledges.length).to.eql(2);
   });
 
   it('lets a user know if a project is successful', function () {
-    var project_name = 'WebComics';
-    var target_amount = '200';
     var backer_name = 'BillyBob';
-    var credit_card_one = '4532759003363827';
-    var backing_amount = '100';
     var project_name = 'WebComics';
+    var credit_card_one = '4532759003363827';
+    var backing_amount = 100;
     data.add_pledge(backer_name, project_name, credit_card_one, backing_amount);
 
     var list = list_backers(project_name);

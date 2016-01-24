@@ -24,10 +24,10 @@ describe('The data store API', function () {
   describe('Getting and Setting data', function () {
     before(function () {
       var project_name = 'WebComics';
-      var target_amount = '200';
+      var target_amount = 200;
       var given_name = 'EllaRose';
       var credit_card = '3337396323439158';
-      var backing_amount = '1000';
+      var backing_amount = 1000;
       data.init();
       data.add_project(project_name, target_amount);
       data.add_pledge(given_name, project_name, credit_card, backing_amount);
@@ -35,8 +35,8 @@ describe('The data store API', function () {
 
     it('adds and returns a project object', function () {
       expect(data.get_project('WebComics')).to.be.an.object;
-      expect(data.get_project('WebComics').target_amount).to.eql('200');
-      expect(data.get_project('WebComics').backers.length).to.eql(1);
+      expect(data.get_project('WebComics').target_amount).to.eql(200);
+      expect(data.get_project('WebComics').pledges.length).to.eql(1);
     });
 
     it('adds and returns a backer object', function () {

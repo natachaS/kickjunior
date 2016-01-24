@@ -6,7 +6,7 @@ var data = require('../lib/data/data');
 describe('Backing a project', function () {
   beforeEach(function () {
     var project_name = 'Pebble_watch';
-    var target_amount = '1000000';
+    var target_amount = 1000000;
     data.init();
     data.add_project(project_name, target_amount);
   });
@@ -65,7 +65,7 @@ describe('Backing a project', function () {
     var credit_card = '372763991372080';
     var backing_amount = '50';
 
-    back_project( user, project_name, credit_card, backing_amount);
+    back_project(user, project_name, credit_card, backing_amount);
     expect(data.get_backer('Aaron')).to.exist;
     expect(data.get_backer('Aaron').length).to.eql(1);
   });

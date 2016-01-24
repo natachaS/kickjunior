@@ -8,7 +8,7 @@ describe('Listing all projects backed by a user', function () {
     var project_name = 'Pebble_watch';
     var backer_name = 'Natacha';
     var credit_card = '4716268306224478';
-    var backing_amount = '500';
+    var backing_amount = 500;
     data.init();
     data.add_project(project_name);
     data.add_pledge(backer_name, project_name, credit_card, backing_amount);
