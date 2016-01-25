@@ -9,16 +9,6 @@ describe('The data store API', function () {
       expect(data.init).to.exist;
       expect(data.init).to.be.a('function');
     });
-
-    it('should clear the data store', function () {
-      var _data = { projects: {},
-                    backers: {},
-                    pledges: {},
-                    cards: {}
-                  };
-      var obj = data.init();
-      expect(obj).to.eql(_data);
-    });
   });
 
   describe('Getting and Setting data', function () {
